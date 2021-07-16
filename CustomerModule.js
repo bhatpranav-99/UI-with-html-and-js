@@ -1,4 +1,5 @@
 var CustomerModule= (function(){function Customer(){
+    
     var name="";
     var address="";
     var amount=0;
