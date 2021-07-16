@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple UI In Js</title>
+    <script src="CustomerModule.js"></script>
+   
+     
+</head>
+
+<body>
+    <script>
+        function AddCustomer(){
+            var name=document.querySelector("#name").value;
+            var address=window.document.querySelector("#address").value;
+            var amount=window.document.querySelector("#amount").value;
+           
+            var customer=CustomerModule.Customer();
+
+            customer.setname(name);
+            customer.setaddress(address);
+            customer.setamount(amount);
+
+            document.querySelector("#nameIn").innerText=customer.getname();
+            document.querySelector("#addressIn").innerText=customer.getaddress();
+            document.querySelector("#amountIn").innerText=customer.getamount();
+            document.querySelector(".outputView");
+        }
+    </script>
+  <table>
+   <tr>
+        <td>name  :- </td>
+        <td><input type=text id ="name"></td>   
+    </tr>
+    <tr>
+        <td>Address  :-</td>
+        <td><textarea rows="10" cols="19" id="address"></textarea></td>
+    </tr>
+    <tr>
+        <td>Amount  :-</td>
+        <td><input type=number id="amount"></td>  
+    </tr>
+    <tr>
+       
+        <td><input type="button" onclick="AddCustomer()" value="Submit"/></td>
+       </tr>
+  </table>
+
+  <table class="outputView" id="output" >
+      <tr>
+          <td><h3>Name : </h3></td>
+          <td><h3 id="nameIn"></h3></td>
+      </tr>
+      <tr>
+        <td><h3>Address : </h3></td>
+        <td><h3 id="addressIn"></h3></td>
+    </tr>
+    <tr>
+        <td><h3>Amount : </h3></td>
+        <td><h3 id="amountIn"></h3></td>
+    </tr>
+  </table>
+  
+</body>
+</html>
